@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>דרכון לעולם ✈️ | קורס סביב העולם</title>
+<style>
+/* Hosted-shell parity: the app CSS pins html/body (position fixed, overflow
+   hidden), which in the hosted shell is fine but on a plain Pages document
+   clips the landing page and makes it impossible to scroll to the lessons.
+   Restore normal document flow. */
+html, body { position: static !important; overflow: visible !important; height: auto !important; }
+/* Fallback for browsers without dvh support so lesson decks keep a real
+   viewport height (placed before 246-main.css; its valid dvh rule wins
+   where supported). */
+.sw-app:not(.sw-landing) { height: calc(100vh - 100px); }
+</style>
 <link rel="stylesheet" href="./246-main.css">
 <script>
 window.instinctFile = Object.freeze({
